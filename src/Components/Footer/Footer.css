@@ -1,0 +1,40 @@
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    background-color: var(--bg-color);
+}
+
+.footerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 0.8rem;
+    color: var(--white-color);
+    margin: 0 16px;
+    font-weight: 700;
+    font-size: 13.8157px;
+    text-transform: capitalize;
+}
+
+hr {
+    height: 1px;
+    background-color: #F0EFF5;
+}
+
+.footerArea button a {
+    color: var(--white-color);
+}
+
+.footerArea button a#github, .footerArea button a#linkedin {
+    transition: all 0.5s ease;
+}
+
+.footerArea button:hover a#github, .footerArea button:hover a#linkedin {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--primary-color);
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
