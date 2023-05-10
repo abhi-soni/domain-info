@@ -1,8 +1,8 @@
 footer {
-    position: relative;
+    position: absolute;
     width: 100%;
     bottom: 0;
-    height: auto;
+    height: 62px;
     background-color: #3A3E49;
 }
 
@@ -20,11 +20,6 @@ footer {
     margin: 0 0;
 }
 
-hr {
-    margin: 0 !important;
-    background-color: var(--bg-color);
-}
-
 .footerArea button a {
     color: var(--text-color);
 }
@@ -38,4 +33,9 @@ hr {
     text-shadow: 0 0 15px var(--orange-color);
     transition: all 0.5s ease;
     transform: scale(1.1);
+}
+
+/* Fix Footer Icon Margin */
+.footerLinks {
+    margin-top: 2px;
 }

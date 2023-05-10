@@ -62,7 +62,7 @@ const Header = (props) => {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar component="nav" className='navBar'>
+            <AppBar component="nav" className='navBar' sx={{ height: { xs: 'unset', sm: 'unset', md: 'unset' } }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"

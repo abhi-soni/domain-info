@@ -1,12 +1,11 @@
 import './Footer.css';
-import { Divider, IconButton } from '@mui/material';
+import { IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
     return (
         <footer>
-            <Divider variant="middle" />
             <div className='footerArea'>
                 <span>Made with ❤️ by Abhishek Soni</span>
                 <span className='footerLinks'>
