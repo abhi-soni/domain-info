@@ -14,9 +14,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Whois Info', 'DNS Info'];
 
 const Header = (props) => {
     const { window } = props;
@@ -33,13 +33,27 @@ const Header = (props) => {
             </Typography>
             <Divider />
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                <Stack spacing={1.5} className='respNavBtn' mt={1.5}>
+                    <Link to='/'>
+                        <Button variant='outlined' sx={{
+                            width: '95%', margin: '0 5px', color: '#000', textTransform: 'capitalize', border: '1px solid #3A3E49', '&:hover': {
+                                backgroundColor: 'var(--orange-color)',
+                                textShadow: '0 0 15px var(--orange-color)',
+                                transition: 'all 0.5s ease'
+                            }
+                        }}>Whois Info</Button>
+                    </Link>
+                    <Link to="/dns" >
+                        <Button variant='outlined' sx={{
+                            width: '95%', margin: '0 5px', color: '#000', textTransform: 'capitalize', border: '1px solid #3A3E49', '&:hover': {
+                                backgroundColor: 'var(--orange-color)',
+                                textShadow: '0 0 15px var(--orange-color)',
+                                transition: 'all 0.5s ease'
+                            }
+                        }}>DNS Info
+                        </Button>
+                    </Link>
+                </Stack>
             </List>
         </Box>
     );
@@ -63,19 +77,21 @@ const Header = (props) => {
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontWeight: 'bold' }}
-                    >
-                        Domain Info
-                    </Typography>
+                    > Domain Info</Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <Stack direction="row" spacing={2}>
-                            {navItems.map((item) => (
-                                <Button variant='outlined' key={item} onClick={() => {
-                                    alert('clicked');
-                                }} >
-                                    {item}
-                                </Button>
-                            ))}
-                        </Stack>
+                        <List>
+                            <ListItem disablePadding>
+                                <Stack direction="row" spacing={2}>
+                                    <Link to='/'>
+                                        <Button variant='outlined'>Whois Info</Button>
+                                    </Link>
+                                    <Link to="/dns">
+                                        <Button variant='outlined' >DNS Info
+                                        </Button>
+                                    </Link>
+                                </Stack>
+                            </ListItem>
+                        </List>
                     </Box>
                 </Toolbar>
             </AppBar>

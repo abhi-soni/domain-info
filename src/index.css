@@ -20,7 +20,9 @@ body {
 }
 
 /* Override */
-.MuiButton-root.MuiButton-outlined {
+
+/* excluding mobile nav buttons */
+.MuiButton-root.MuiButton-outlined:not(.respNavBtn button) {
   border-color: var(--border-gray-color) !important;
   text-transform: capitalize !important;
   color: #fff !important;
