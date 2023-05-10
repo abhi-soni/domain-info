@@ -1,9 +1,9 @@
 footer {
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     height: auto;
-    background-color: var(--bg-color);
+    background-color: #3A3E49;
 }
 
 .footerArea {
@@ -12,20 +12,21 @@ footer {
     align-items: center;
     padding: 5px 0;
     font-size: 0.8rem;
-    color: var(--white-color);
-    margin: 0 16px;
+    color: var(--text-color);
+    padding: 8px 23px;
     font-weight: 700;
     font-size: 13.8157px;
     text-transform: capitalize;
+    margin: 0 0;
 }
 
 hr {
-    height: 1px;
-    background-color: #F0EFF5;
+    margin: 0 !important;
+    background-color: var(--bg-color);
 }
 
 .footerArea button a {
-    color: var(--white-color);
+    color: var(--text-color);
 }
 
 .footerArea button a#github, .footerArea button a#linkedin {
@@ -33,8 +34,8 @@ hr {
 }
 
 .footerArea button:hover a#github, .footerArea button:hover a#linkedin {
-    color: var(--primary-color);
-    text-shadow: 0 0 15px var(--primary-color);
+    color: var(--orange-color);
+    text-shadow: 0 0 15px var(--orange-color);
     transition: all 0.5s ease;
     transform: scale(1.1);
 }

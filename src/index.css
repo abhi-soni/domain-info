@@ -1,18 +1,27 @@
 :root {
-  --primary-color: #FD930B;
-  --bg-color: #262932;
-  --white-color: #FEFDF8;
+  --orange-color: #FD930B;
+  --bg-color: #BDBDBD;
+  --text-color: #F0EFF5;
+  --border-gray-color: #A1A7AD;
 }
 
 body {
   background-color: var(--bg-color);
-  color: var(--white-color);
-  margin: 0;
+  color: var(--text-color);
   scroll-behavior: smooth;
   height: 100%;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  mix-blend-mode: normal;
+}
+
+/* Override */
+.MuiButton-root.MuiButton-outlined {
+  border-color: var(--border-gray-color) !important;
+  text-transform: capitalize !important;
+  color: #fff !important;
 }
