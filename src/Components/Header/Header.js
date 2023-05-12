@@ -8,8 +8,6 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -28,12 +26,12 @@ const Header = (props) => {
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                Domain Info
+            <Typography variant="h6" sx={{ my: 2,color:'inherit', textDecoration:'none' }}>
+                <Link to="/" id='title'>Domain Info</Link>
             </Typography>
             <Divider />
             <List>
-                <Stack spacing={1.5} className='respNavBtn' mt={1.5}>
+                <Stack spacing={1.5} className='resp_nav_btn' mt={1.5}>
                     <Link to='/'>
                         <Button variant='outlined' sx={{
                             width: '95%', margin: '0 5px', color: '#000', textTransform: 'capitalize', border: '1px solid #3A3E49', '&:hover': {
@@ -62,7 +60,7 @@ const Header = (props) => {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar component="nav" className='navBar' sx={{ height: { xs: 'unset', sm: 'unset', md: 'unset' } }}>
+            <AppBar component="nav" className='navbar' sx={{ height: { xs: 'unset', sm: 'unset', md: 'unset' } }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -77,7 +75,7 @@ const Header = (props) => {
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontWeight: 'bold' }}
-                    > Domain Info</Typography>
+                    > <Link to="/" id='title'>Domain Info</Link></Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <List>
                             <ListItem disablePadding>

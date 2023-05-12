@@ -6,9 +6,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Footer = () => {
     return (
         <footer>
-            <div className='footerArea'>
+            <div className='footer_area'>
                 <span>Made with ❤️ by Abhishek Soni</span>
-                <span className='footerLinks'>
+                <span className='footer_links'>
                     <IconButton sx={{ color: '#FEFDF8' }}>
                         <a id='github' href='https://github.com/abhi-soni/' title="Github Profile Link" target='_blank' rel="noopener noreferrer"> <GitHubIcon /></a>
                     </IconButton>

@@ -3,16 +3,16 @@ footer {
     width: 100%;
     bottom: 0;
     height: 62px;
-    background-color: #3A3E49;
+    background-color: #22223B;
 }
 
-.footerArea {
+.footer_area {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
     font-size: 0.8rem;
-    color: var(--text-color);
+    color: #fff;
     padding: 8px 23px;
     font-weight: 700;
     font-size: 13.8157px;
@@ -20,15 +20,15 @@ footer {
     margin: 0 0;
 }
 
-.footerArea button a {
-    color: var(--text-color);
+.footer_area button a {
+    color: #fff;
 }
 
-.footerArea button a#github, .footerArea button a#linkedin {
+.footer_area button a#github, .footer_area button a#linkedin {
     transition: all 0.5s ease;
 }
 
-.footerArea button:hover a#github, .footerArea button:hover a#linkedin {
+.footer_area button:hover a#github, .footer_area button:hover a#linkedin {
     color: var(--orange-color);
     text-shadow: 0 0 15px var(--orange-color);
     transition: all 0.5s ease;
@@ -36,6 +36,6 @@ footer {
 }
 
 /* Fix Footer Icon Margin */
-.footerLinks {
+.footer_links {
     margin-top: 2px;
 }

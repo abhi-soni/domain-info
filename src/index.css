@@ -1,12 +1,27 @@
 :root {
   --orange-color: #FD930B;
-  --bg-color: #BDBDBD;
-  --text-color: #F0EFF5;
-  --border-gray-color: #A1A7AD;
+  --body-bg-color: #DBE4EE;
+  --text-color: #22223B;
+  --border-gray-color: #a1a7ad;
+  --theme-bg-color: #2D3342;
+}
+
+body::-webkit-scrollbar {
+  width: 11px
+}
+
+body:-webkit-scrollbar-track {
+  background: #fff
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 6px;
+  border: 3px solid #fff
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--body-bg-color);
   color: var(--text-color);
   scroll-behavior: smooth;
   height: 100%;
@@ -17,16 +32,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   mix-blend-mode: normal;
-/* For Footer */
-position: relative;
-min-height: 100vh;
-padding-bottom: 62px;
+  scrollbar-width: thin;
+  scrollbar-color: #999 #fff;
+  /* For Footer */
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 62px;
 }
 
 /* Override */
 
 /* excluding mobile nav buttons */
-.MuiButton-root.MuiButton-outlined:not(.respNavBtn button) {
+.MuiButton-root.MuiButton-outlined:not(.resp_nav_btn button) {
   border-color: var(--border-gray-color) !important;
   text-transform: capitalize !important;
   color: #fff !important;

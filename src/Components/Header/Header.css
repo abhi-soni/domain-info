@@ -1,9 +1,9 @@
-.navBar {
+.navbar {
     position: relative !important;
     height: 65px;
     left: 0px !important;
     top: 0px !important;
-    background: #3A3E49 !important;
+    background: #22223B !important;
     color: var(--orange-color) !important;
     box-shadow: 0px 2px 48px rgba(0, 0, 0, 0.2) !important;
     -webkit-backdrop-filter: blur(129px);
@@ -11,12 +11,17 @@
     z-index: initial !important;
 }
 
-.navBar button {
+.navbar button {
     transition: all 0.5s ease;
 }
 
-.navBar button:hover {
+.navbar button:hover {
     background-color: var(--orange-color);
     text-shadow: 0 0 15px var(--orange-color);
     transition: all 0.5s ease;
+}
+
+#title {
+    text-decoration: none;
+    color: inherit;
 }
