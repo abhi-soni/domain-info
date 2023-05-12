@@ -1,0 +1,44 @@
+.hero_section h3#hero_title {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.hero_section input#domain_url {
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    clip-path: inset(0px -1px -1px -1px);
+    border-radius: 5px;
+}
+
+.search_area {
+    width: 100%;
+}
+
+.search_area form {
+    display: flex;
+    justify-content: center;
+}
+
+/* Adjust Search area and button on responsive view */
+@media (max-width: 768px) {
+    .search_area_flex {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .search_area_flex>div {
+        width: 95% !important;
+    }
+
+    .search_area_flex button {
+        width: 8rem !important;
+        margin-top: 1rem;
+    }
+}
