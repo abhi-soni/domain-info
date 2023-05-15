@@ -26,7 +26,7 @@ const Header = (props) => {
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2,color:'inherit', textDecoration:'none' }}>
+            <Typography variant="h6" sx={{ my: 2,color:'inherit', textDecoration:'none',userSelect:'none' }}>
                 <Link to="/" id='title'>Domain Info</Link>
             </Typography>
             <Divider />

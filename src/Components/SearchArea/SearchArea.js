@@ -19,6 +19,7 @@ const SearchArea = () => {
         e.preventDefault();
         console.log(domain_url);
         setFormSubmitted(true);
+
     }
     // Input URL Validition 
     const handleTextFieldChange = (e) => {
@@ -26,6 +27,7 @@ const SearchArea = () => {
         setdomain_url(url);
         const regex = /^(?:(?:https?:\/\/)?(?:www\.)?)?([a-zA-Z0-9-]+)(?:\.[a-zA-Z0-9-]+)+(?:\/\S*)?$/;
         setError(!regex.test(url));
+        setFormSubmitted(false);
     }
 
     return (
@@ -33,25 +35,25 @@ const SearchArea = () => {
             <Grid container spacing={2} margin={0}>
                 {/* margin:0 to fix grid overflow */}
                 <Grid xs={12} md={12} lg={12}>
-                    <h3 id='hero_title'>{titleText} Domain Lookup</h3>
+                    <h3 id='hero_title' style={{userSelect:"none"}}>{titleText} Domain Lookup</h3>
                 </Grid>
                 <div className='search_area'>
                     <Grid xs={12} md={12}>
                         <Box component="form"
                             sx={{ '& > :not(style)': { width: { xs: '100%', sm: '100%', md: '65ch' } }, }}
-                            noValidate className='search_area_flex'
+                            noValidate className='search_area_flex' onSubmit={handleFormSubmit}
                             autoComplete="off">
                             <TextField id="domain_url" value={domain_url} type='url' label="Enter Domain Name" variant="outlined" error={error} helperText={error ? 'Please enter valid domain name' : null}
                                 onChange={handleTextFieldChange} sx={textFieldStyle} />
-                            <Button variant="contained" type='submit' endIcon={<SearchIcon />} onClick={handleFormSubmit} size="large" disabled={error || domain_url.length < 1} sx={submitButtonStyle}>
+                            <Button variant="contained" type='submit' endIcon={<SearchIcon />} size="large" disabled={error || domain_url.length < 1} sx={submitButtonStyle}>
                                 Submit
                             </Button>
                         </Box>
                     </Grid>
                 </div>
             </Grid>
-            {formSubmitted && !error && location.pathname === '/' && <Whois url={domain_url} />}
-            {formSubmitted && !error && location.pathname === '/dns' && <DNS url={domain_url} />}
+            {formSubmitted && !error && location.pathname === '/' && (<Whois url={domain_url} />)}
+            {formSubmitted && !error && location.pathname === '/dns' && (<DNS url={domain_url} />)}
         </div>
     );
 }
