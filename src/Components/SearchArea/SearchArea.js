@@ -35,7 +35,7 @@ const SearchArea = () => {
             <Grid container spacing={2} margin={0}>
                 {/* margin:0 to fix grid overflow */}
                 <Grid xs={12} md={12} lg={12}>
-                    <h3 id='hero_title' style={{userSelect:"none"}}>{titleText} Domain Lookup</h3>
+                    <h3 id='hero_title' style={{ userSelect: "none" }}>{titleText} Domain Lookup</h3>
                 </Grid>
                 <div className='search_area'>
                     <Grid xs={12} md={12}>
