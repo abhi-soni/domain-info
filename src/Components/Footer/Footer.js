@@ -9,9 +9,9 @@ const Footer = () => {
             <div className='footer_area'>
                 <span>Made with ❤️ by Abhishek Soni</span>
                 <span className='footer_links'>
-                    <IconButton sx={{ color: '#FEFDF8' }}>
+                    {/* <IconButton sx={{ color: '#FEFDF8' }}>
                         <a id='github' href='https://github.com/abhi-soni/' title="Github Profile Link" target='_blank' rel="noopener noreferrer"> <GitHubIcon /></a>
-                    </IconButton>
+                    </IconButton> */}
                     <IconButton sx={{ color: '#FEFDF8', paddingRight: 0 }}>
                         <a id="linkedin" href='https://www.linkedin.com/in/abhisheksoni2/' title="Linkedin Profile Link" target='_blank' rel="noopener noreferrer"><LinkedInIcon /></a>
                     </IconButton>
