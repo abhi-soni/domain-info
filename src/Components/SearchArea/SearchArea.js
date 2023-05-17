@@ -25,7 +25,7 @@ const SearchArea = () => {
     const handleTextFieldChange = (e) => {
         const url = e.target.value;
         setdomain_url(url);
-        const regex = /^(?:(?:https?:\/\/)?(?:www\.)?)?([a-zA-Z0-9-]+)(?:\.[a-zA-Z0-9-]+)+(?:\/\S*)?$/;
+        const regex = /^(?!(?:https?:\/\/))[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+(?:\/\S*)?$/;
         setError(!regex.test(url));
         setFormSubmitted(false);
     }
@@ -43,7 +43,7 @@ const SearchArea = () => {
                             sx={{ '& > :not(style)': { width: { xs: '100%', sm: '100%', md: '65ch' } }, }}
                             noValidate className='search_area_flex' onSubmit={handleFormSubmit}
                             autoComplete="off">
-                            <TextField id="domain_url" value={domain_url} type='url' label="Enter Domain Name" variant="outlined" error={error} helperText={error ? 'Please enter valid domain name' : null}
+                            <TextField id="domain_url" value={domain_url} type='url' label="Enter Domain Name" variant="outlined" error={error} helperText={error ? 'Please enter valid domain name' : "Please enter URL without HTTP, HTTPS"}
                                 onChange={handleTextFieldChange} sx={textFieldStyle} />
                             <Button variant="contained" type='submit' endIcon={<SearchIcon />} size="large" disabled={error || domain_url.length < 1} sx={submitButtonStyle}>
                                 Submit

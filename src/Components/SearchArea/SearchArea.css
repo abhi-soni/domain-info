@@ -21,7 +21,10 @@
     display: flex;
     justify-content: center;
 }
-
+.MuiFormHelperText-root
+{
+    margin-top: 5px !important;
+}
 /* Adjust Search area and button on responsive view */
 @media (max-width: 768px) {
     .search_area_flex {
