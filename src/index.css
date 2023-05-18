@@ -40,6 +40,15 @@ body {
   padding-bottom: 62px;
 }
 
+.apiError {
+  display: block;
+  width: 100%;
+  color: red;
+  text-align: center;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
 /* Override */
 
 /* excluding mobile nav buttons */
@@ -47,4 +56,12 @@ body {
   border-color: var(--border-gray-color) !important;
   text-transform: capitalize !important;
   color: #fff !important;
+}
+
+/* Loader */
+span.MuiCircularProgress-root {
+  color: var(--theme-bg-color);
+  position: relative;
+  left: 48%;
+  margin: 15px 0;
 }
