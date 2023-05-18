@@ -36,7 +36,7 @@ body {
   scrollbar-color: #999 #fff;
   /* For Footer */
   position: relative;
-  min-height: 100vh;
+  min-height: 91.vh;
   padding-bottom: 62px;
 }
 
