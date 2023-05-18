@@ -19,7 +19,6 @@ const SearchArea = () => {
         e.preventDefault();
         console.log(domain_url);
         setFormSubmitted(true);
-
     }
     // Input URL Validition 
     const handleTextFieldChange = (e) => {
@@ -52,8 +51,8 @@ const SearchArea = () => {
                     </Grid>
                 </div>
             </Grid>
-            {formSubmitted && !error && location.pathname === '/' && (<Whois url={domain_url} />)}
-            {formSubmitted && !error && location.pathname === '/dns' && (<DNS url={domain_url} />)}
+            {formSubmitted && location.pathname === '/' && (<Whois url={domain_url} />)}
+            {formSubmitted && location.pathname === '/dns' && (<DNS url={domain_url} />)}
         </div>
     );
 }
