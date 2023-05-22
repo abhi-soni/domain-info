@@ -17,7 +17,6 @@ const SearchArea = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log(domain_url);
         setFormSubmitted(true);
     }
     // Input URL Validition 

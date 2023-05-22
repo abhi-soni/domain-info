@@ -19,7 +19,6 @@ const Whois = (props) => {
             'X-RapidAPI-Host': 'zozor54-whois-lookup-v1.p.rapidapi.com'
         }
     }), [apiKey]);
-    console.log('Whhois Called');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,7 +28,6 @@ const Whois = (props) => {
                 const response = await axios.get(apiUrl, options);
                 setResult(response.data);
                 setLoading(false);
-                console.log(response.data);
             } catch (error) {
                 console.error(error);
                 setLoading(false);
