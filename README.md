@@ -4,21 +4,29 @@
 [![GitHub issues](https://img.shields.io/github/issues/abhi-soni/domain-info)](https://github.com/abhi-soni/domain-info/issues)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/abhi-soni/domain-info)
 
-Domain Info is a web application to get the WHOIS and DNS details of a domain.
+Domain Info is a Web Application to get the WHOIS and DNS details of a domain.
 
-## Demo
+## Screenshots
 
-You can see the live demo of the application at #
+#### Whois Lookup
+![SCREENSHOT-domain-info-abhishek](public/screenshots/Whois.png "Whois Lookup Info for domain")
+
+#### DNS Lookup
+![SCREENSHOT-domain-info-abhishek](public/screenshots/DNS.png "DNS Lookup Info for domain")
+## Live Application URL
+
+You can access the application live at  [https://domain-info-abhishek.netlify.app](https://domain-info-abhishek.netlify.app)
 
 ## Prerequisites
 
-- Node.js installed on your local machine.
+- Node.js installed on local machine.
 
 ## Features
 
 - Perform Whois lookup on a domain name.
-- Perform DNS lookup on a domain name.
+- Perform DNS lookup on a domain name. 
 - Displays the information in an easy-to-read format.
+- Feature to copy data to clipboard via single click.
 
 ## Installation
 
@@ -32,6 +40,11 @@ You can see the live demo of the application at #
 ## Usage
 
 - Select Whois or DNS tab from the navigation bar.
-- Enter a domain name in the search bar.
+- Enter a valid domain name in the search bar.
 - Click on the "Submit" button to fetch the information.
 - The information will be displayed on the screen.
+- User can click on the "Copy" Icon to copy the information to clipboard.
+
+## Contributing
+
+Contributions are welcome. Feel free to open a pull request or branch from this repo.
