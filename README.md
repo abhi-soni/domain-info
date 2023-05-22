@@ -13,6 +13,7 @@ Domain Info is a Web Application to get the WHOIS and DNS details of a domain.
 
 #### DNS Lookup
 ![SCREENSHOT-domain-info-abhishek](public/screenshots/DNS.png "DNS Lookup Info for domain")
+
 ## Live Application URL
 
 You can access the application live at  [https://domain-info-abhishek.netlify.app](https://domain-info-abhishek.netlify.app)
