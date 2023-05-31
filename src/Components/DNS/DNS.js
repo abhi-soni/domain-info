@@ -37,19 +37,19 @@ const DNS = (props) => {
     }, [props.url, apiUrl, options]);
 
     const rows = result === null ? [] : [
-        { label: `A`, value: result.A || 'Not Available' },
-        { label: `AAAA`, value: result.AAAA || 'Not Available' },
-        { label: 'MX Url', value: result.MX.map((mx) => mx.exchange || 'Not Available').join(', ') },
-        { label: 'MX Priority', value: result.MX.map((mx) => mx.priority || 'Not Available').join(', ') },
-        { label: 'NS', value: result.NS.map((ns, index) => { return <span key={index}>{ns}<br /></span> }) },
+        { label: `A`, value: (result.A && result.A) || 'Not Available' },
+        { label: `AAAA`, value: (result.AAAA && result.AAAA.join(', ')) || 'Not Available' },
+        { label: 'MX Url', value: (result.MX && result.MX.map((mx) => mx.exchange)).join(', ') || 'Not Available' },
+        { label: 'MX Priority', value: (result.MX && result.MX.map((mx) => mx.priority)).join(', ') || 'Not Available' },
+        { label: 'NS', value: (result.NS && result.NS.map((ns, index) => { return <span key={index}>{ns}<br /></span> })) || 'Not Available' },
         {
             label: 'SOA', value:
-                Object.entries(result.SOA).map((soa) => {
+                result.SOA ? Object.entries(result.SOA).map((soa) => {
                     const [key, value] = soa;
                     return <span key={key}>{key.charAt(0).toUpperCase() + key.slice(1) + ': ' + value}<br /></span>;
-                })
+                }) : "Not Available"
         },
-        { label: 'TXT', value: result.TXT.map((txt, index) => { return <span key={index}>{txt}+<br /></span> }) },
+        { label: 'TXT', value: (result.TXT && result.TXT.map((txt, index) => { return <span key={index}>{txt}+<br /></span> })) || 'Not Available' },
     ];
 
     return (
