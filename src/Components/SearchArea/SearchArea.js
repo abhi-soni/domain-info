@@ -23,7 +23,7 @@ const SearchArea = () => {
     const handleTextFieldChange = (e) => {
         const url = e.target.value;
         setdomain_url(url);
-        const regex = /^(?!(?:https?:\/\/))[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+(?:\/[^/]*[^\/\s])?$/;
+        const regex = /^(?!(?:https?:\/\/))[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+(?:\/[^/]*[^/\s])?$/;
         setError(!regex.test(url));
         setFormSubmitted(false);
     }
