@@ -1,17 +1,7 @@
 import './Header.css';
 import React from 'react';
-import Stack from '@mui/material/Stack';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+import { Stack, AppBar, Box, Divider, Drawer, IconButton, List, ListItem, Toolbar, Button, Typography } from '@mui/material/';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -26,7 +16,7 @@ const Header = (props) => {
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2,color:'inherit', textDecoration:'none',userSelect:'none' }}>
+            <Typography variant="h6" sx={{ my: 2, color: 'inherit', textDecoration: 'none', userSelect: 'none' }}>
                 <Link to="/" id='title'>Domain Info</Link>
             </Typography>
             <Divider />
@@ -49,6 +39,16 @@ const Header = (props) => {
                                 transition: 'all 0.5s ease'
                             }
                         }}>DNS Info
+                        </Button>
+                    </Link>
+                    <Link to="/history" >
+                        <Button variant='outlined' sx={{
+                            width: '95%', margin: '0 5px', color: '#000', textTransform: 'capitalize', border: '1px solid #3A3E49', '&:hover': {
+                                backgroundColor: 'var(--orange-color)',
+                                textShadow: '0 0 15px var(--orange-color)',
+                                transition: 'all 0.5s ease'
+                            }
+                        }}>URL History
                         </Button>
                     </Link>
                 </Stack>
@@ -85,6 +85,11 @@ const Header = (props) => {
                                     </Link>
                                     <Link to="/dns">
                                         <Button variant='outlined' >DNS Info
+                                        </Button>
+                                    </Link>
+                                    <Link to="/history">
+                                        <Button variant="outlined">
+                                            URL History
                                         </Button>
                                     </Link>
                                 </Stack>

@@ -18,6 +18,11 @@ const SearchArea = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         setFormSubmitted(true);
+        
+        // save visited url's in session storage
+        let urlHistory = JSON.parse(sessionStorage.getItem('URL History')) || [];
+        urlHistory.push(domain_url);
+        sessionStorage.setItem('URL History', JSON.stringify(urlHistory));
     }
     // Input URL Validition 
     const handleTextFieldChange = (e) => {
