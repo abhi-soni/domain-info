@@ -1,5 +1,5 @@
 import './SearchArea.css';
-import * as React from 'react';
+import { useState } from 'react';
 import { TextField, Box, Button } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import SearchIcon from '@mui/icons-material/Search';
@@ -9,16 +9,16 @@ import { useLocation } from 'react-router-dom';
 
 const SearchArea = () => {
     const location = useLocation();
-    const [domain_url, setdomain_url] = React.useState('');
-    const [error, setError] = React.useState(false);
-    const [formSubmitted, setFormSubmitted] = React.useState(false);
+    const [domain_url, setdomain_url] = useState('');
+    const [error, setError] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     const titleText = location.pathname === '/' ? 'Whois' : 'DNS';
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
         setFormSubmitted(true);
-        
+
         // save visited url's in session storage
         let urlHistory = JSON.parse(sessionStorage.getItem('URL History')) || [];
         urlHistory.push(domain_url);

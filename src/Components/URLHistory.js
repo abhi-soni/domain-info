@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Dialog, DialogTitle, DialogContent } from '@mui/material/';
 import IconButton from '@mui/material/IconButton';
@@ -35,7 +35,7 @@ function HistoryPopupTitle(props) {
 }
 
 const URLHistory = () => {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = useState(true);
 
     const handleClose = () => {
         setOpen(false);
@@ -44,10 +44,10 @@ const URLHistory = () => {
     return (
         <HistoryPopup
             onClose={handleClose}
-            aria-labelledby="customized-dialog-title"
+            aria-labelledby="title"
             open={open}
         >
-            <HistoryPopupTitle id="customized-dialog-title" onClose={handleClose} style={{ color: 'var(--text-color)' }}>
+            <HistoryPopupTitle id="title" onClose={handleClose} style={{ color: 'var(--text-color)' }}>
                 Explored URL History
             </HistoryPopupTitle>
             <DialogContent dividers>
