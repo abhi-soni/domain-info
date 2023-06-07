@@ -9,14 +9,20 @@ Domain Info is a Web Application to get the WHOIS and DNS details of a domain.
 ## Screenshots
 
 #### Whois Lookup
+
 ![SCREENSHOT-domain-info-abhishek](public/screenshots/Whois.png "Whois Lookup Info for domain")
 
 #### DNS Lookup
+
 ![SCREENSHOT-domain-info-abhishek](public/screenshots/DNS.png "DNS Lookup Info for domain")
+
+#### URL History
+
+![SCREENSHOT-domain-info-abhishek](public/screenshots/URL_History.png "URL History")
 
 ## Live Application URL
 
-You can access the application live at  [https://domain-info-abhishek.netlify.app](https://domain-info-abhishek.netlify.app)
+You can access the application live at [https://domain-info-abhishek.netlify.app](https://domain-info-abhishek.netlify.app)
 
 ## Prerequisites
 
@@ -25,9 +31,10 @@ You can access the application live at  [https://domain-info-abhishek.netlify.ap
 ## Features
 
 - Perform Whois lookup on a domain name.
-- Perform DNS lookup on a domain name. 
+- Perform DNS lookup on a domain name.
 - Displays the information in an easy-to-read format.
 - Feature to copy data to clipboard via single click.
+- User can see the Explored URLs history.
 
 ## Installation
 
@@ -45,6 +52,7 @@ You can access the application live at  [https://domain-info-abhishek.netlify.ap
 - Click on the "Submit" button to fetch the information.
 - The information will be displayed on the screen.
 - User can click on the "Copy" Icon to copy the information to clipboard.
+- Access the "History" tab to see the Explored URLs history.
 
 ## Contributing
 
