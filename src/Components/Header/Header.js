@@ -16,8 +16,8 @@ const Header = (props) => {
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2, color: 'inherit', textDecoration: 'none', userSelect: 'none' }}>
-                <Link to="/" id='title'>Domain Info</Link>
+            <Typography variant="h6" sx={{ my: 2, color: 'inherit', textDecoration: 'none', }}>
+                <Link to="/" id='title'>Menu</Link>
             </Typography>
             <Divider />
             <List>
@@ -67,15 +67,15 @@ const Header = (props) => {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
+                        sx={{ mr: 2, display: { sm: 'none' } }}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontWeight: 'bold' }}
-                    > <Link to="/" id='title'>Domain Info</Link></Typography>
+                    <Link to="/" id='title'> <Typography variant="h6" component="div"
+                        sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'flex' }, fontWeight: 'bold' }}>
+                        <img src="/favicon-32x32.png" alt='Header_Icon' style={{ paddingRight: "5px" }}
+                            width={"30px"} height={"30px"} />
+                        Domain Info
+                    </Typography></Link>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <List>
                             <ListItem disablePadding>

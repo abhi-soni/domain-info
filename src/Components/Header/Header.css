@@ -9,6 +9,7 @@
     -webkit-backdrop-filter: blur(129px);
     backdrop-filter: blur(129px);
     z-index: initial !important;
+    user-select: none;
 }
 
 .navbar button {
@@ -24,4 +25,22 @@
 #title {
     text-decoration: none;
     color: inherit;
+}
+
+@media (min-width: 768px) {
+
+    /* fix header to combine header icon & text for link*/
+    div.MuiToolbar-root {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* fix title position on mobile devices */
+@media (max-width: 576px) {
+    div.MuiTypography-root {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -28%;
+    }
 }
