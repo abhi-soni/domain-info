@@ -1,5 +1,7 @@
 {
   "name": "domain-info",
+  "author": "Abhishek Soni",
+  "description": "Web Application to get Whois & DNS info for a domain",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -17,6 +19,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://domain-info-abhishek.netlify.app/",
   "scripts": {
     "start": "react-scripts start",
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
