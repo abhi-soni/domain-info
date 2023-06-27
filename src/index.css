@@ -36,8 +36,6 @@ body {
   scrollbar-color: #999 #fff;
   /* For Footer */
   position: relative;
-  min-height: 91.14vh;
-  padding-bottom: 62px;
 }
 
 .apiError {

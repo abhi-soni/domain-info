@@ -1,5 +1,5 @@
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
     height: 62px;
@@ -10,14 +10,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
     font-size: 0.8rem;
     color: #fff;
     padding: 8px 23px;
     font-weight: 700;
     font-size: 13.8157px;
     text-transform: capitalize;
-    margin: 0 0;
+    margin: 0;
 }
 
 .footer_area button a {
