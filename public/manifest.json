@@ -1,6 +1,11 @@
 {
-  "short_name": "Domain Info",
   "name": "Domain Info",
+  "short_name": "Domain Info",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "description": "Web Application to get Whois & DNS info for a domain",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,9 +22,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  ]
 }

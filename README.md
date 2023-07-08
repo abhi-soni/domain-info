@@ -35,6 +35,7 @@ You can access the application live at [https://domain-info-abhishek.netlify.app
 - Displays the information in an easy-to-read format.
 - Feature to copy data to clipboard via single click.
 - User can see the Explored URLs history.
+- It's an PWA (Progressive Web App) and can be installed on mobile devices.
 
 ## Installation
 
