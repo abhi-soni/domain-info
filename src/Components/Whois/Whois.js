@@ -81,7 +81,7 @@ const Whois = (props) => {
             {result && (
                 <Box m={2} id="box_parent">
                     <Grid container spacing={2} justifyContent='center'>
-                        <Grid item xs={12} md={6} sx={{ flexBasis: '100% !important', maxWidth: '95% !important', marginTop: '3rem !important' }}>
+                        <Grid item xs={12} md={6} sx={{ flexBasis: '100% !important', maxWidth: '95% !important', marginTop: '3rem !important',paddingBottom:'3rem' }}>
                             <Paper elevation={3}>
                                 <Box p={2} color='var(--text-color)' style={{ overflowWrap: 'break-word' }}>
                                     <Typography variant="h5" gutterBottom>Whois Lookup Results</Typography>
