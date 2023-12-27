@@ -3,6 +3,7 @@
   "author": "Abhishek Soni",
   "description": "Web Application to get Whois & DNS info for a domain",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -16,32 +17,19 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "vite": "^5.0.10",
+    "web-vitals": "^2.1.4",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5"
   },
   "homepage": "https://domain-info-abhishek.netlify.app/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   }
 }

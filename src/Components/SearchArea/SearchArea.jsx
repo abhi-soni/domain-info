@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { TextField, Box, Button } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import SearchIcon from '@mui/icons-material/Search';
-import Whois from '../Whois/Whois';
-import DNS from '../DNS/DNS';
+import Whois from '../Whois/Whois.jsx';
+import DNS from '../DNS/DNS.jsx';
 import { useLocation } from 'react-router-dom';
 
 const SearchArea = () => {
