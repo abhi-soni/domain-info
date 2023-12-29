@@ -17,7 +17,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Copy from "../CopyToClipboard.jsx";
+import Copy from "../CopyToClipboard";
 
 const Whois = (props) => {
   const [result, setResult] = useState(null);
