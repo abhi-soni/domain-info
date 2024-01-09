@@ -8,6 +8,6 @@ export default defineConfig({
     open: true,
   },
   build:{
-    sourcemap:false,
+    sourcemap:'hidden',
   }
 })

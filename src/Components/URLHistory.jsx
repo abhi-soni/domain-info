@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 import { Dialog, DialogTitle, DialogContent } from "@mui/material/";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
 const HistoryPopup = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -36,9 +37,11 @@ function HistoryPopupTitle(props) {
 
 const URLHistory = () => {
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
 
   const handleClose = () => {
     setOpen(false);
+    navigate("/");
   };
 
   return (

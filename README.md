@@ -44,7 +44,7 @@ You can access the application live at [https://domain-info-abhishek.netlify.app
 2. Change directory: `cd domain-info`
 3. Install dependencies: `npm install`
 4. Start the server: `npm run dev`
-5. Open `http://localhost:3000` in your browser to view the app.
+5. Open `http://localhost:5173` in your browser to view the app.
 
 ## Usage
 
